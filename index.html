@@ -152,93 +152,92 @@
         <p>Github: <a href="https://github.com/viniciusfariac">viniciusfariac</a></p>
         <p>Pascoa com binarios</p>
     </footer>
-
-
-    <script>
-        let contador = 1
-
-        function verificacao(tipo, numero) {
-
-            let regex = new RegExp("[A-Z]")
-            let regex_binario = new RegExp("[2-9]")
-            let regex_octal = new RegExp("[8-9]")
-            let regex_hexa = new RegExp("[G-Z]")
-            if (!numero) {
-                div_mensagem_resultado.innerHTML = "<p>Digite um número</p>"
-            } else if (tipo === 2 && !regex_binario.test(numero) && !regex.test(numero.toUpperCase())) {
-                converterBinario()
-            } else if (tipo === 8 && !regex_octal.test(numero) && !regex.test(numero.toUpperCase())) {
-                converterOctal()
-            } else if (tipo === 16 && !regex_hexa.test(numero.toUpperCase())) {
-                converterHexadecimal()
-            } else if (tipo === 10 && !regex.test(numero.toUpperCase())) {
-                converterDecimal()
-            } else {
-                div_mensagem_resultado.innerHTML = "<p>Digite um valor válido</p>"
-            }
-        }
-
-        function adicionarNumero(tipo, numero_escolhido, convertido1, convertido2, convertido3, tipo1, tipo2, tipo3) {
-            div_historico.innerHTML += `<ul><li>${contador}º: ${tipo} ${numero_escolhido}<li>
-                <li>convertido ${tipo1} ${convertido1}<li>
-                <li>convertido ${tipo2} ${convertido2}<li>
-                <li>convertido ${tipo3} ${convertido3}<li><ul>`
-            contador++
-        }
-
-        function exibir_resultado(convertido1, valor1, convertido2, valor2, convertido3, valor3) {
-            div_mensagem_resultado.innerHTML = `<p> ${convertido1}: ${valor1}</p>
-            <p>${convertido2}:${valor2}</p>
-            <p>${convertido3}:${valor3}</p>`
-        }
-
-        function converterBinario() {
-            let numeroBinario = parseInt(ipt_numero.value, 2)
-            let octal = numeroBinario.toString(8)
-            let hexa = numeroBinario.toString(16).toUpperCase()
-            let decimal = numeroBinario.toString(10)
-
-            exibir_resultado("Octal", octal, "Hexadecimal", hexa, "Decimal", decimal)
-            adicionarNumero("binario", ipt_numero.value, octal, hexa, decimal, "octal", "hexadecimal", "decimal")
-        }
-
-
-        function converterDecimal() {
-            let numeroDecimal = Number(ipt_numero.value);
-            let octal = numeroDecimal.toString(8)
-            let hexa = numeroDecimal.toString(16).toUpperCase()
-            let binario = numeroDecimal.toString(2)
-            exibir_resultado("Octal", octal, "Hexadecimal", hexa, "Binário", binario)
-            adicionarNumero("decimal", ipt_numero.value, octal, hexa, binario, "octal", "hexadecimal", "binario")
-        }
-
-        function converterOctal() {
-            let numeroOctal = parseInt(ipt_numero.value, 8);
-            let decimal = numeroOctal.toString(10)
-            let hexa = numeroOctal.toString(16).toUpperCase()
-            let binario = numeroOctal.toString(2)
-
-            exibir_resultado("Decimal", decimal, "Hexadecimal", hexa, "Binário", binario)
-            adicionarNumero("octal", ipt_numero.value, decimal, hexa, binario, "decimal", "hexadecimal", "binario")
-        }
-
-        function converterHexadecimal() {
-            let numeroHexadecimal = parseInt(ipt_numero.value, 16);
-            let octal = numeroHexadecimal.toString(8)
-            let decimal = numeroHexadecimal.toString(10)
-            let binario = numeroHexadecimal.toString(2)
-
-            exibir_resultado("Octal", octal, "Decimal", decimal, "Binário", binario)
-            adicionarNumero("hexadecimal", ipt_numero.value, octal, binario, decimal, "octal", "binario", "decimal")
-        }
-
-        function converter() {
-            let tipo = Number(ipt_tipo.value)
-            let numero = ipt_numero.value
-
-            verificacao(tipo, numero)
-        }
-    </script>
 </body>
 
 </html>
+
+<script>
+    let contador = 1
+
+    function verificacao(tipo, numero) {
+
+        let regex = new RegExp("[A-Z]")
+        let regex_binario = new RegExp("[2-9]")
+        let regex_octal = new RegExp("[8-9]")
+        let regex_hexa = new RegExp("[G-Z]")
+        if (!numero) {
+            div_mensagem_resultado.innerHTML = "<p>Digite um número</p>"
+        } else if (tipo === 2 && !regex_binario.test(numero) && !regex.test(numero.toUpperCase())) {
+            converterBinario()
+        } else if (tipo === 8 && !regex_octal.test(numero) && !regex.test(numero.toUpperCase())) {
+            converterOctal()
+        } else if (tipo === 16 && !regex_hexa.test(numero.toUpperCase())) {
+            converterHexadecimal()
+        } else if (tipo === 10 && !regex.test(numero.toUpperCase())) {
+            converterDecimal()
+        } else {
+            div_mensagem_resultado.innerHTML = "<p>Digite um valor válido</p>"
+        }
+    }
+
+    function adicionarNumero(tipo, numero_escolhido, convertido1, convertido2, convertido3, tipo1, tipo2, tipo3) {
+        div_historico.innerHTML += `<ul><li>${contador}º: ${tipo} ${numero_escolhido}<li>
+                <li>convertido ${tipo1} ${convertido1}<li>
+                <li>convertido ${tipo2} ${convertido2}<li>
+                <li>convertido ${tipo3} ${convertido3}<li><ul>`
+        contador++
+    }
+
+    function exibir_resultado(convertido1, valor1, convertido2, valor2, convertido3, valor3) {
+        div_mensagem_resultado.innerHTML = `<p> ${convertido1}: ${valor1}</p>
+            <p>${convertido2}:${valor2}</p>
+            <p>${convertido3}:${valor3}</p>`
+    }
+
+    function converterBinario() {
+        let numeroBinario = parseInt(ipt_numero.value, 2)
+        let octal = numeroBinario.toString(8)
+        let hexa = numeroBinario.toString(16).toUpperCase()
+        let decimal = numeroBinario.toString(10)
+
+        exibir_resultado("Octal", octal, "Hexadecimal", hexa, "Decimal", decimal)
+        adicionarNumero("binario", ipt_numero.value, octal, hexa, decimal, "octal", "hexadecimal", "decimal")
+    }
+
+
+    function converterDecimal() {
+        let numeroDecimal = Number(ipt_numero.value);
+        let octal = numeroDecimal.toString(8)
+        let hexa = numeroDecimal.toString(16).toUpperCase()
+        let binario = numeroDecimal.toString(2)
+        exibir_resultado("Octal", octal, "Hexadecimal", hexa, "Binário", binario)
+        adicionarNumero("decimal", ipt_numero.value, octal, hexa, binario, "octal", "hexadecimal", "binario")
+    }
+
+    function converterOctal() {
+        let numeroOctal = parseInt(ipt_numero.value, 8);
+        let decimal = numeroOctal.toString(10)
+        let hexa = numeroOctal.toString(16).toUpperCase()
+        let binario = numeroOctal.toString(2)
+
+        exibir_resultado("Decimal", decimal, "Hexadecimal", hexa, "Binário", binario)
+        adicionarNumero("octal", ipt_numero.value, decimal, hexa, binario, "decimal", "hexadecimal", "binario")
+    }
+
+    function converterHexadecimal() {
+        let numeroHexadecimal = parseInt(ipt_numero.value, 16);
+        let octal = numeroHexadecimal.toString(8)
+        let decimal = numeroHexadecimal.toString(10)
+        let binario = numeroHexadecimal.toString(2)
+
+        exibir_resultado("Octal", octal, "Decimal", decimal, "Binário", binario)
+        adicionarNumero("hexadecimal", ipt_numero.value, octal, binario, decimal, "octal", "binario", "decimal")
+    }
+
+    function converter() {
+        let tipo = Number(ipt_tipo.value)
+        let numero = ipt_numero.value
+
+        verificacao(tipo, numero)
+    }
+</script>
