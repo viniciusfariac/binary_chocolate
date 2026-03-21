@@ -275,3 +275,13 @@ footer p a {
 #div_historico {
     padding: 2rem 0;
 }
+
+::-webkit-scrollbar {
+    background-color: var(--cor-principal);
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--cor-secundaria);
+    width: 5px;
+}
