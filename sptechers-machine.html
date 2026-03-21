@@ -74,7 +74,7 @@
                     </svg>
                 </div>
                 <div class="main__content__ask">
-                    <h3>Digite um número decimal ou não coma chocolate:</h3>
+                    <h3>Digite um número e escolha a base ou não coma chocolate:</h3>
                     <select id="ipt_tipo">
                         <option value="2">Base 2</option>
                         <option value="8">Base 8</option>
@@ -163,8 +163,9 @@
             let regex_binario = new RegExp("[2-9]")
             let regex_octal = new RegExp("[8-9]")
             let regex_hexa = new RegExp("[G-Z]")
-
-            if (tipo === 2 && !regex_binario.test(numero) && !regex.test(numero.toUpperCase())) {
+            if (!numero) {
+                div_mensagem_resultado.innerHTML = "<p>Digite um número</p>"
+            } else if (tipo === 2 && !regex_binario.test(numero) && !regex.test(numero.toUpperCase())) {
                 converterBinario()
             } else if (tipo === 8 && !regex_octal.test(numero) && !regex.test(numero.toUpperCase())) {
                 converterOctal()
