@@ -160,16 +160,21 @@
         function verificacao(tipo, numero) {
 
             let regex = new RegExp("[A-Z]")
-            if (tipo != 16 && regex.test(numero.toUpperCase())) {
-                div_mensagem_resultado.innerHTML = "<p>Digite um valor válido</p>"
-            } else if (tipo === 2) {
+            let regex_binario = new RegExp("[2-9]")
+            let regex_octal = new RegExp("[8-9]")
+            let regex_hexa = new RegExp("[G-Z]")
+            console.log(tipo === 2)
+            console.log(regex_binario.test(numero))
+            if (tipo === 2 && !regex_binario.test(numero) && !regex.test(numero.toUpperCase())) {
                 converterBinario()
-            } else if (tipo === 8) {
+            } else if (tipo === 8 && !regex_octal.test(numero) && !regex.test(numero.toUpperCase())) {
                 converterOctal()
-            } else if (tipo === 16) {
+            } else if (tipo === 16 && !regex_hexa.test(numero.toUpperCase())) {
                 converterHexadecimal()
-            } else if (tipo === 10) {
+            } else if (tipo === 10 && !regex.test(numero.toUpperCase())) {
                 converterDecimal()
+            } else {
+                div_mensagem_resultado.innerHTML = "<p>Digite um valor válido</p>"
             }
         }
 
