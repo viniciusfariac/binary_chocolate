@@ -163,8 +163,7 @@
             let regex_binario = new RegExp("[2-9]")
             let regex_octal = new RegExp("[8-9]")
             let regex_hexa = new RegExp("[G-Z]")
-            console.log(tipo === 2)
-            console.log(regex_binario.test(numero))
+
             if (tipo === 2 && !regex_binario.test(numero) && !regex.test(numero.toUpperCase())) {
                 converterBinario()
             } else if (tipo === 8 && !regex_octal.test(numero) && !regex.test(numero.toUpperCase())) {
