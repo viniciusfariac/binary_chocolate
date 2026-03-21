@@ -23,20 +23,20 @@
                 <p class="p__nav">Chocolate</p>
                 <div class="header__menu_svg">
                     <li class="header__item" class="header__svg">
-                        <a href="#calculator">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="size-6">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008Zm0 2.25h.008v.008H8.25V13.5Zm0 2.25h.008v.008H8.25v-.008Zm0 2.25h.008v.008H8.25V18Zm2.498-6.75h.007v.008h-.007v-.008Zm0 2.25h.007v.008h-.007V13.5Zm0 2.25h.007v.008h-.007v-.008Zm0 2.25h.007v.008h-.007V18Zm2.504-6.75h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V13.5Zm0 2.25h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V18Zm2.498-6.75h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V13.5ZM8.25 6h7.5v2.25h-7.5V6ZM12 2.25c-1.892 0-3.758.11-5.593.322C5.307 2.7 4.5 3.65 4.5 4.757V19.5a2.25 2.25 0 0 0 2.25 2.25h10.5a2.25 2.25 0 0 0 2.25-2.25V4.757c0-1.108-.806-2.057-1.907-2.185A48.507 48.507 0 0 0 12 2.25Z" />
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="header__item" class="header__svg">
                         <a href="#hero">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="size-6">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="header__item" class="header__svg">
+                        <a href="#calculator">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008Zm0 2.25h.008v.008H8.25V13.5Zm0 2.25h.008v.008H8.25v-.008Zm0 2.25h.008v.008H8.25V18Zm2.498-6.75h.007v.008h-.007v-.008Zm0 2.25h.007v.008h-.007V13.5Zm0 2.25h.007v.008h-.007v-.008Zm0 2.25h.007v.008h-.007V18Zm2.504-6.75h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V13.5Zm0 2.25h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V18Zm2.498-6.75h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V13.5ZM8.25 6h7.5v2.25h-7.5V6ZM12 2.25c-1.892 0-3.758.11-5.593.322C5.307 2.7 4.5 3.65 4.5 4.757V19.5a2.25 2.25 0 0 0 2.25 2.25h10.5a2.25 2.25 0 0 0 2.25-2.25V4.757c0-1.108-.806-2.057-1.907-2.185A48.507 48.507 0 0 0 12 2.25Z" />
                             </svg>
                         </a>
                     </li>
@@ -64,7 +64,7 @@
         </div>
         <div>
 
-            <section style="background-color: #5C3317;">
+            <section class="section_waves" id="calculator">
                 <div class="waves-top">
                     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
                         preserveAspectRatio="none">
@@ -73,23 +73,21 @@
                             class="shape-fill"></path>
                     </svg>
                 </div>
-                <div class="main__content__ask" id="calculator">
+                <div class="main__content__ask">
                     <h3>Digite um número decimal ou não coma chocolate:</h3>
-                    <input id="demo1" type="number" placeholder="Ex: 42">
+                    <select id="ipt_tipo">
+                        <option value="2">Base 2</option>
+                        <option value="8">Base 8</option>
+                        <option value="10">Base 10</option>
+                        <option value="16">Base 16</option>
+                    </select>
+                    <input id="ipt_numero" type="text" placeholder="Ex: 42">
 
                     <button onclick="converter()">Converter</button>
                 </div>
                 <div class="main__content__result">
                     <h3>Resultados:</h3>
-                    <p>Octal:
-                        <span id="demo2"></span>
-                    </p>
-                    <p>Hexadecimal:
-                        <span id="demo3"></span>
-                    </p>
-                    <p>Binário:
-                        <span id="demo4"></span>
-                    </p>
+                    <div id="div_mensagem_resultado"></div>
                 </div>
                 <div class="waves-bottom">
                     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
@@ -100,6 +98,16 @@
                     </svg>
                 </div>
             </section>
+        </div>
+        <div class="main__content__database" id="database">
+
+            <div class="main__title_database">
+                <h3>Veja seu histórico</h3>
+            </div>
+            <div class="main__database">
+                <div id="div_historico">
+                </div>
+            </div>
         </div>
     </main>
     <footer>
@@ -138,15 +146,83 @@
 
 
     <script>
-        let banco = []
-        function converter() {
-            let decimal = Number(demo1.value);
-            banco.push(decimal)
-            demo2.innerHTML = decimal.toString(8);
-            demo3.innerHTML = decimal.toString(16);
-            demo4.innerHTML = decimal.toString(2);
+        let contador = 1
 
-            
+        function verificacao(tipo, numero) {
+
+            let regex = new RegExp("[A-Z]")
+            if (tipo != 16 && regex.test(numero.toUpperCase())) {
+                div_mensagem_resultado.innerHTML = "<p>Digite um valor válido</p>"
+            } else if (tipo === 2) {
+                converterBinario()
+            } else if (tipo === 8) {
+                converterOctal()
+            } else if (tipo === 16) {
+                converterHexadecimal()
+            } else if (tipo === 10) {
+                converterDecimal()
+            }
+        }
+
+        function adicionarNumero(tipo, numero_escolhido, convertido1, convertido2, convertido3, tipo1, tipo2, tipo3) {
+            div_historico.innerHTML += `<ul><li>${contador}º: ${tipo} ${numero_escolhido}<li>
+                <li>convertido ${tipo1} ${convertido1}<li>
+                <li>convertido ${tipo2} ${convertido2}<li>
+                <li>convertido ${tipo3} ${convertido3}<li><ul>`
+            contador++
+        }
+
+        function exibir_resultado(convertido1, valor1, convertido2, valor2, convertido3, valor3) {
+            div_mensagem_resultado.innerHTML = `<p> ${convertido1}: ${valor1}</p>
+            <p>${convertido2}:${valor2}</p>
+            <p>${convertido3}:${valor3}</p>`
+        }
+
+        function converterBinario() {
+            let numeroBinario = parseInt(ipt_numero.value, 2)
+            let octal = numeroBinario.toString(8)
+            let hexa = numeroBinario.toString(16).toUpperCase()
+            let decimal = numeroBinario.toString(10)
+
+            exibir_resultado("Octal", octal, "Hexadecimal", hexa, "Decimal", decimal)
+            adicionarNumero("binario", ipt_numero.value, octal, hexa, decimal, "octal", "hexadecimal", "decimal")
+        }
+
+
+        function converterDecimal() {
+            let numeroDecimal = Number(ipt_numero.value);
+            let octal = numeroDecimal.toString(8)
+            let hexa = numeroDecimal.toString(16).toUpperCase()
+            let binario = numeroDecimal.toString(2)
+            exibir_resultado("Octal", octal, "Hexadecimal", hexa, "Binário", binario)
+            adicionarNumero("decimal", ipt_numero.value, octal, hexa, binario, "octal", "hexadecimal", "binario")
+        }
+
+        function converterOctal() {
+            let numeroOctal = parseInt(ipt_numero.value, 8);
+            let decimal = numeroOctal.toString(10)
+            let hexa = numeroOctal.toString(16).toUpperCase()
+            let binario = numeroOctal.toString(2)
+
+            exibir_resultado("Decimal", decimal, "Hexadecimal", hexa, "Binário", binario)
+            adicionarNumero("octal", ipt_numero.value, decimal, hexa, binario, "decimal", "hexadecimal", "binario")
+        }
+
+        function converterHexadecimal() {
+            let numeroHexadecimal = parseInt(ipt_numero.value, 16);
+            let octal = numeroHexadecimal.toString(8)
+            let decimal = numeroHexadecimal.toString(10)
+            let binario = numeroHexadecimal.toString(2)
+
+            exibir_resultado("Octal", octal, "Decimal", decimal, "Binário", binario)
+            adicionarNumero("hexadecimal", ipt_numero.value, octal, binario, decimal, "octal", "binario", "decimal")
+        }
+
+        function converter() {
+            let tipo = Number(ipt_tipo.value)
+            let numero = ipt_numero.value
+
+            verificacao(tipo, numero)
         }
     </script>
 </body>
