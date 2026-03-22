@@ -165,15 +165,17 @@
         let regex_binario = new RegExp("[2-9]")
         let regex_octal = new RegExp("[8-9]")
         let regex_hexa = new RegExp("[G-Z]")
+        let regex_caracter = new RegExp("[^a-zA-Z0-9]")
+
         if (!numero) {
             div_mensagem_resultado.innerHTML = "<p>Digite um número</p>"
-        } else if (tipo === 2 && !regex_binario.test(numero) && !regex.test(numero.toUpperCase())) {
+        } else if (tipo === 2 && !regex_binario.test(numero) && !regex.test(numero.toUpperCase()) && !regex_caracter.test(numero))  {
             converterBinario()
-        } else if (tipo === 8 && !regex_octal.test(numero) && !regex.test(numero.toUpperCase())) {
+        } else if (tipo === 8 && !regex_octal.test(numero) && !regex.test(numero.toUpperCase()) && !regex_caracter.test(numero)) {
             converterOctal()
-        } else if (tipo === 16 && !regex_hexa.test(numero.toUpperCase())) {
+        } else if (tipo === 16 && !regex_hexa.test(numero.toUpperCase()) && !regex_caracter.test(numero)) {
             converterHexadecimal()
-        } else if (tipo === 10 && !regex.test(numero.toUpperCase())) {
+        } else if (tipo === 10 && !regex.test(numero.toUpperCase()) && !regex_caracter.test(numero)) {
             converterDecimal()
         } else {
             div_mensagem_resultado.innerHTML = "<p>Digite um valor válido</p>"
