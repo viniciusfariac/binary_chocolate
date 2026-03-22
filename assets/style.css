@@ -1,3 +1,4 @@
+/* Reset css */
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +7,7 @@
     text-decoration: none;
 }
 
+/* Variáveis de cores padrão do site */
 :root {
     --cor-principal: #FDF8EE;
     --cor-secundaria: #5C3317;
@@ -13,6 +15,7 @@
     --cor-destaque: #FF8DA1;
 }
 
+/* Scrool mais calmo */
 html{
     scroll-behavior: smooth;
 }
@@ -26,6 +29,7 @@ button {
     cursor: pointer;
 }
 
+/* Quando passar por cima mudar a cor */
 button:hover {
     background-color: var(--cor-destaque);
     transition: 1s;
@@ -129,11 +133,13 @@ svg {
     margin: 0 auto;
 }
 
+/* Header 100% */
+
 header {
     width: 100%;
 }
 
-
+/* Utilizando flex no main */
 main {
     display: flex;
     flex-direction: column;
@@ -141,6 +147,7 @@ main {
     width: 100%;
 }
 
+/* Section com waves, precisa ter para dar o formato e a largura */
 .section_waves {
     position: relative;
     display: flex;
@@ -151,7 +158,7 @@ main {
 }
 
 
-
+/* Titúlo centralizado */
 .main__tilte {
     display: flex;
     flex-direction: column;
@@ -160,12 +167,16 @@ main {
     margin: 0 auto;
 }
 
+/* Frase de impacto */
+
 .main__hero {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-bottom: 3rem;
 }
+
+/* Configuração do título para quebrar linha */
 
 .main__title h1 {
     padding-left: 2.2rem;
@@ -174,12 +185,15 @@ main {
     font-size: 5rem;
 }
 
+/* Configuração do texto para quebrar linha */
+
 .main__text {
     width: 440px;
     padding-top: 1rem;
     text-align: center;
 }
 
+/* Configuração da pergunta */
 .main__content__ask {
     display: flex;
     flex-direction: column;
@@ -189,11 +203,12 @@ main {
     gap: 1rem;
 }
 
+/* Configuração do título da pergunta */
 .main__content__ask h3 {
     color: var(--cor-principal);
     font-size: 1.8rem;
 }
-
+/* Configuração do resultado */
 .main__content__result{
     display: flex;
     flex-direction: column;
@@ -202,10 +217,13 @@ main {
     color: var(--cor-principal);
 }
 
+/* Título resultado tamanho da fonte */
 .main__content__result h3{
     font-size: 1.8rem;
 }
 
+
+/* Configuração do footer */
 footer {
     margin-top: 10rem;
     height: 300px;
@@ -217,26 +235,35 @@ footer {
     color: var(--cor-principal);
 }
 
+
+/* Configuração dos icons */
 .footer__icons {
     display: flex;
     gap: 1.2rem;
     padding-right: 1.8rem;
 }
 
+
+/* Configuração da cor dos icons */
 .footer__icons li svg {
     color: var(--cor-principal);
 }
 
+
+/* Hover dos icons, para passar por cima e mudar a cor */
 .footer__icons li svg:hover {
     transition: 1s;
     color: var(--cor-destaque);
 }
 
+/* Configuração das cores e uso de important para funcionar */
 footer p a {
     color: var(--cor-principal);
     text-decoration: none !important;
 }
 
+
+/* Configuração da caixa do histórico */
 .main__content__database {
     margin-top: 12rem;
     display: flex;
@@ -245,11 +272,15 @@ footer p a {
     height: 900px;
 }
 
+
+/* Configuração do título Veja seu histórico */
 .main__content__database h3{
     font-size: 4rem;
     width: 300px;
 }
 
+
+/* Configuração da caixa que exibe o histórico */
 .main__database {
     background-color: var(--cor-secundaria);
     height: 90%;
@@ -260,27 +291,32 @@ footer p a {
     justify-content: space-around;
     align-items: center;
     color: var(--cor-principal);
-    overflow-y: scroll;
+    overflow-y: scroll; /* Esta linha faz o que transbordar ser scrool */
 }
+
+/* Titulo h3 em upper case */
 
 .main__database h3 {
     text-transform: uppercase;
 }
 
-.main__database h3, 
+/* Histórico centralizado*/
 .main__database p{
     margin: 0 auto;
 }
 
+/* Padding entre os resultados */
 #div_historico {
     padding: 2rem 0;
 }
 
+/* Mudando a cor da barra de navegação */
 ::-webkit-scrollbar {
     background-color: var(--cor-principal);
     width: 5px;
 }
 
+/* Mudando a cor do quadrado da barra de naveção */
 ::-webkit-scrollbar-thumb {
     background-color: var(--cor-secundaria);
     width: 5px;
