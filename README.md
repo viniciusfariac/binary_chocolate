@@ -19,17 +19,21 @@ Decimal para Hexadecimal
 E todas as combinações entre essas bases, permitindo o usuário o poder de escolha
 
 <img width="1855" height="961" alt="image" src="https://github.com/user-attachments/assets/75612d47-3b00-4eb3-929d-78a8872335fc" />
+
 ### Histórico de conversões:
+
 - Exibe os valores digitados pelo usuário
 - Atualiza dinamicamente a cada conversão
 
 <img width="1855" height="961" alt="image" src="https://github.com/user-attachments/assets/5a5f936e-f806-4eb9-9dce-d8efef7602d5" />
+
 ### Reset automático:
 - O histórico é apagado ao recarregar ou relogar a página
 Interface temática:
 - Cores inspiradas em chocolate
 
 ### Verificação de número digitado:
+
 - Verificação com regex para cada tipo de base
 - Impossibilidade de digitar valores incorretos
 - Impossibilidade de digitar valores vazios (nulos)
