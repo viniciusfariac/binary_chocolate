@@ -1,5 +1,7 @@
 # Binary Chocolate Machine
-Uma calculadora temática inspirada em chocolate + sistema binário, criada para converter números entre diferentes bases numéricas de forma rápida, intuitiva e com um visual diferenciado.
+Uma calculadora temática inspirada em chocolate + sistema binário, criada para converter números entre diferentes bases numéricas de forma rápida, intuitiva e com um visual diferenciado.7
+
+<img width="1855" height="961" alt="image" src="https://github.com/user-attachments/assets/37c81c22-9bae-40ad-9efb-1abf0895ac7e" />
 
 ## Sobre o Projeto
 A Binary Chocolate Machine (ou Chocolate Machine) é uma calculadora para o exercício feito da matéria arquitetura computacional da faculdade SPtech.
